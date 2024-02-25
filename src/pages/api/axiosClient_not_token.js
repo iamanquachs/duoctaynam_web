@@ -2,7 +2,6 @@ import axios from "axios";
 import { parse, stringify } from "qs";
 
 const axiosClient_not_token = axios.create({
-  baseURL: "https://api.duoctaynam.vn/",
   // baseURL: "http://localhost/2023/TPSPharma/TPS_nextjs/Backend",
   paramsSerializer: {
     encode: parse,
