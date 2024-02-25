@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: "OpenSans-Regular";
+    src: url("../font/OpenSans-Regular.ttf") format("truetype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "OpenSans-SemiBold";
+    src: url("../font/OpenSans-SemiBold.ttf") format("truetype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "OpenSans-Bold";
+    src: url("../font/OpenSans-Bold.ttf") format("truetype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter-Regular";
+    src: url("../font/Inter-Regular.ttf") format("truetype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter-SemiBold";
+    src: url("../font/Inter-SemiBold.ttf") format("truetype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter-Bold";
+    src: url("../font/Inter-Bold.ttf") format("truetype");
+    font-display: swap;
+  }
+
+  body {
+    font-family: "OpenSans-Regular";
+    font-display: swap;
+  }
+ 
+  /* Header */
+  .sessions_container {
+    @apply fullscreen:container fullscreen:mx-auto py-10 ;
+  }
+  .items_hangsx{
+    @apply fullscreen:container smlap:container px-2 lglap:container mx-auto h-[25px] mobile:h-[30px] flex justify-between items-center overflow-x-scroll whitespace-nowrap gap-2 tablet:gap-3 text-black 
+  }
+  ::-webkit-scrollbar{
+    height: 0px;
+    width: 10px;
+    background: gray;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+::-webkit-scrollbar-thumb:horizontal{
+    background: #000;
+    border-radius: 10px;
+}
+  
+  /* End Header */
+  /* ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+  /* Body */
+  .bg_body{
+    background: #f1fafe;
+  }
+
+  /* Banner */
+  .btn_danhmuc{
+    @apply max-w-[130px] min-w-[130px] flex items-center bg-[green] text-white rounded-md p-2 justify-center;
+    
+  }
+  /* Search form */
+  .input_search{
+    @apply   relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none;
+  }
+ 
+  .btn_search{
+    @apply absolute right-[10px] top-[8px] bottom-[10px]
+  }
+  .list_search{
+    @apply overflow-auto absolute top-11 max-h-[80vh] w-full mobile:w-[85%] mobile:top-12 mobile:right-0 fullscreen:left-0 smlap:left-0 lglap:left-0 tablet:left-0 shadow-lg z-[9999] bg-[#f1fafe] rounded-sm
+  }
+  
+  .list_search:hover {
+    @apply block !important
+  }
+ 
+  .list_search_items{
+    @apply grid grid-cols-12 p-3 items-center border-b-[1px] gap-2 hover:bg-[#ddd] hover:cursor-pointer;
+  }
+  .active_list_search{
+    @apply block !important;
+  }
+
+  /* Login */
+  .input_login{
+    @apply  block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none;
+  }
+  .btn_login{
+    @apply inline-block px-7 py-3 bg-green-600  text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out !important;
+  }
+  .close_login{
+    @apply inline-block px-5 py-1 bg-[#ddd] text-black font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[grey] hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out !important;
+  }
+
+  /* Sản phẩm */
+  .text-blue-500{
+    @apply text-green-500
+  }
+  .ten_sanpham{
+    font-family: "Inter-SemiBold";
+    @apply  line-clamp-2 text-[15px] text-[#023e02] hover:text-[green];
+  }
+  .ten_nhom{
+    font-family: "OpenSans-SemiBold";
+    @apply  text-[18px] flex flex-row whitespace-nowrap;
+  }
+  .font_giaban{
+    font-family: "Inter-Regular";
+
+  }
+  .giabanform label{
+    @apply p-[3px]
+  }
+  .img_sanpham{
+    
+    @apply flex justify-center items-center w-full pt-[100%] mobile:pt-[50%] h-auto relative ;
+    
+  }
+  .img_sanpham img{
+    @apply absolute top-0 left-0 h-full w-full bg-white;
+    
+  }
+  .chitiet_item{
+    @apply truncate whitespace-normal text-sm font-thin;
+  }
+  .soluong{
+    @apply col-span-6 flex items-center justify-between w-full px-1  border-[1px] border-gray-400 rounded-[0.2rem]
+  }
+  .btn_dathang{
+    @apply bg-[green] col-span-6 text-xs rounded-[0.2rem] text-white  z-[100] relative hover:border-[green] border;
+  }
+  .title_sanpham{
+    font-family: "OpenSans-Bold";
+    @apply relative pl-5 italic font-black text-xl mobile:text-[15px]  before:absolute before:rotate-[20deg] before:w-[6px] before:h-[70%] before:top-[4px] before:left-[5px]  before:skew-y-[-20deg] before:bg-[red];
+  }
+  .giagoc{
+    @apply line-through text-sm;
+  }
+  .giaban{
+    @apply text-sm text-[red];
+  }
+  .active_nhomsp{
+    @apply bg-orange-400 px-3 h-full flex items-center font-[600] text-black 
+  }
+  .active_filter {
+    @apply bg-orange-400 px-2 rounded-md
+  }
+
+  /* Giỏ hàng */
+  .header_tb_giohang{
+    @apply text-sm font-medium text-gray-900 px-6 tablet:px-3 smlap:px-3 py-4 text-right;
+  }
+  .item_giohang{
+    @apply text-sm text-gray-900 font-light pr-6 tablet:pr-3 smlap:pr-3 py-4 whitespace-nowrap text-right lglap:p-3 ;
+  }
+  /* Chi tiết sản phẩm */
+  .item_mota{
+    @apply text-left pt-5 flex flex-row items-center  after:border-b-[#ddd] after:border-b-[1px] after:m-auto after:w-full after:ml-5; 
+  }
+  .item_mota h2{
+    @apply flex flex-row font-bold text-[green] whitespace-nowrap;
+  }
+  .title_mota{
+    @apply uppercase
+  }
+  .header_res_mobile{
+    @apply mobile:hidden 
+  }
+  .list_search_items{
+    @apply mobile:p-1
+  }
+  .container_sanpham{
+    @apply mobile:grid-cols-2 mobile:gap-3
+  }
+  .items_nhomsp{
+    @apply mobile:text-xs mobile:px-2 mobile:overflow-x-scroll mobile:whitespace-nowrap mobile:gap-3
+  }
+ .items_nuocsx{
+    @apply mobile:gap-2 px-2 fullscreen:container smlap:container mobile:w-full lglap:container fullscreen:mx-auto smlap:mx-auto lglap:mx-auto overflow-x-scroll h-[25px] mobile:h-[30px] gap-5 whitespace-nowrap flex justify-between items-center text-black 
+  }
+  .btn_dathang{
+    @apply mobile:text-[10px] mobile:leading-6
+  }
+  .item_giohang{
+    @apply mobile:text-left mobile:p-2
+}
+.activeHistory{
+  @apply bg-[#ddd] !important
+}
+.dropdown_user{
+  @apply top-[25px] !important
+}
+
+  /* End Body */
+  /* ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+  /* Footer */
+  .title_item_footer {
+    font-family: "OpenSans-Bold";
+    @apply  text-[16px] text-[#103c19] ;
+  }
+  .item_footer li {
+    @apply  text-[#000]  text-sm py-1;
+  }
+  .item_footer ul li {
+    @apply  text-[#000]  text-sm py-1;
+  }
+ 
+  /* End Footer */
+
+}
